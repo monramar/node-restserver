@@ -7,5 +7,4 @@ app.use(require('./login'));
 
 
 
-
-module.exports=app;
+module.exports = app;
