@@ -26,8 +26,8 @@ app.post('/login', (req, res) => {
                 err
             });
         }
-console.log(`usuario-: ${ usuarioDB}`);
 
+        
         if (!usuarioDB) {
             return res.status(400).json({
                 ok: false,
@@ -39,7 +39,7 @@ console.log(`usuario-: ${ usuarioDB}`);
 
 
         //if (!bcrypt.compareSync(body.password, usuarioDB.password)) {
-        if (!(body.password  === usuarioDB.password)) {
+        if (body.password  === usuarioDB.password) {
                 return res.status(400).json({
                 ok: false,
                 err: {
